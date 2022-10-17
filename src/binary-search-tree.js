@@ -86,7 +86,7 @@ class BinarySearchTree {
           max = max.right
         }
         node.data = max.data
-        max = null
+        max = removeNode(node.left, max.data) // max = null
       }
 
       if (data < node.data) {
@@ -101,7 +101,7 @@ class BinarySearchTree {
 
   min() {
     if (!this.rootNode) {
-      return
+      return null
     }
 
     let minNode = this.rootNode
@@ -114,12 +114,12 @@ class BinarySearchTree {
 
   max() {
     if (!this.rootNode) {
-      return
+      return null
     }
 
     let maxNode = this.rootNode
     while (maxNode.right) {
-      maxNode.right
+      maxNode = maxNode.right
     }
 
     return maxNode.data
