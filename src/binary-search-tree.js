@@ -18,7 +18,7 @@ class BinarySearchTree {
         node = new Node(data)
       }
 
-      if (node.data === data) {
+      if (data === node.data) {
         return node
       }
 
@@ -40,7 +40,7 @@ class BinarySearchTree {
         return null
       }
 
-      if (node.data === data) {
+      if (data === node.data) {
         return node
       }
 
