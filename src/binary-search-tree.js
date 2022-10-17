@@ -86,7 +86,7 @@ class BinarySearchTree {
           max = max.right
         }
         node.data = max.data
-        max = removeNode(node.left, max.data) // max = null
+        max = null
       }
 
       if (data < node.data) {
